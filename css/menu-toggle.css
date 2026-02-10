@@ -185,8 +185,33 @@ body.menu-top #colorlib-hero {
 	margin-top: 0;
 }
 
-/* Responsive adjustments for top menu */
-@media screen and (max-width: 768px) {
+/* Mobile responsive header menu */
+@media screen and (max-width: 992px) {
+	.colorlib-header-top #colorlib-main-menu-top ul {
+		display: none;
+	}
+	
+	.colorlib-header-top #colorlib-main-menu-top.active ul {
+		display: block;
+	}
+	
+	.colorlib-header-top #colorlib-main-menu-top ul li {
+		display: block;
+		margin-left: 0;
+		margin: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	
+	.colorlib-header-top #colorlib-main-menu-top ul li:last-child {
+		border-bottom: none;
+	}
+	
+	.colorlib-header-top #colorlib-main-menu-top ul li a {
+		display: block;
+		padding: 15px 10px;
+		font-size: 15px;
+	}
+	
 	.colorlib-header-top {
 		padding: 15px 0;
 	}
@@ -201,13 +226,15 @@ body.menu-top #colorlib-hero {
 	}
 	
 	.colorlib-header-top #colorlib-main-menu-top ul {
-		text-align: center;
+		text-align: left;
 		margin-top: 15px;
-	}
-	
-	.colorlib-header-top #colorlib-main-menu-top ul li {
-		display: block;
-		margin: 5px 0;
+		position: absolute;
+		top: 70px;
+		left: 0;
+		right: 0;
+		background: #1a1a1a;
+		z-index: 1000;
+		border-bottom: 3px solid #FFC300;
 	}
 	
 	body.menu-top #colorlib-main {
@@ -216,13 +243,29 @@ body.menu-top #colorlib-hero {
 }
 
 @media screen and (max-width: 480px) {
+	.colorlib-header-top {
+		padding: 12px 0;
+	}
+	
+	.colorlib-header-top #colorlib-logo-top a {
+		font-size: 20px;
+	}
+	
 	.colorlib-header-top #colorlib-main-menu-top ul li a {
-		font-size: 14px;
-		padding: 8px 12px;
+		font-size: 13px;
+		padding: 12px 10px;
+		min-height: 44px;
+		display: flex;
+		align-items: center;
 	}
 	
 	body.menu-top #colorlib-main {
-		margin-top: 160px;
+		margin-top: 120px;
+	}
+	
+	.colorlib-header-top .container-fluid {
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 }
 
